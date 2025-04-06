@@ -30,9 +30,16 @@ const Sidebar = () => {
     const goToDashboard = () => {
       navigate('/dashboard');
     };
+    const goToHome = () => {
+      navigate('/');
+    };
     
   return (
     <div className="fixed top-0 left-0 flex flex-col items-center w-64 h-screen py-6 bg-gray-800">
+       <button onClick={goToHome} className="flex items-center w-10/12 h-12 px-4 text-white transition-all rounded-lg hover:bg-gray-600 hover:shadow-lg">
+        <UserCircleIcon className="w-6 h-6 mr-3" />
+        Home
+      </button>
       <button onClick={goToDashboard} className="flex items-center w-10/12 h-12 px-4 mb-6 text-white transition-all rounded-lg hover:bg-gray-600 hover:shadow-lg">
         <ClipboardDocumentCheckIcon className="w-6 h-6 mr-3" />
         Dashboard
@@ -57,6 +64,7 @@ const Sidebar = () => {
         <UserCircleIcon className="w-6 h-6 mr-3" />
         Profile
       </button>
+     
     </div>
   );
 };
